@@ -8,7 +8,7 @@ const importPromo = require('./promo.json')
 const importLeader = require('./leader.json')
 const cors =require('cors');
 app.use(cors({
-    origin : "https://restaurant-4e27e.web.app/"
+    origin : "https://restaurant-4e27e.web.app"
 }));
 
 app.use(express.static('public'));

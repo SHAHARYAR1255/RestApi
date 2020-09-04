@@ -6,6 +6,10 @@ const importComment = require('./comment.json')
 const importFeedback = require('./db.json')
 const importPromo = require('./promo.json')
 const importLeader = require('./leader.json')
+const cors =require('cors');
+app.use(cors({
+    origin : 'http://localhost:3000'
+}));
 
 app.use(express.static('public'));
 

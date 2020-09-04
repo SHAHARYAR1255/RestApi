@@ -2,14 +2,17 @@ const express = require("express");
 const app = express();
 let port = process.env.PORT || 3000 ;
 const importDishes = require('./dishes.json');
-const importPromo = require('./promo.json');
-const importLeader = require('./leader.json');
-const importFeedback = require('./db.json');
-const importComment = require('./comment.json');
+const importComment = require('./comment.json')
+const importFeedback = require('./db.json')
+const importPromo = require('./promo.json')
+const importLeader = require('./leader.json')
+
+app.use(express.static('public'));
 
 app.get("/", (req, res) =>{
     res.send('Hello World');
 });
+
 app.get("/dishes", (req, res) =>{
     res.send(importDishes);
 });
